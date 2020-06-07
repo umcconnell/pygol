@@ -2,6 +2,8 @@
 
 Python Game of Life.
 
+![Docs](https://github.com/umcconnell/pygol/workflows/Docs/badge.svg)
+
 ## Table of Contents
 
 -   [Getting Started](#getting-started)
