@@ -31,8 +31,9 @@ jobs:
             - name: Run sphinx
               run: make -C ./docs/
 
-            - name: Deploy
-              uses: peaceiris/actions-gh-pages@v3
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@releases/v3
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./docs/_build/html
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  BRANCH: gh-pages
+                  FOLDER: docs/_build/html/
