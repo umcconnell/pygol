@@ -1,0 +1,1009 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>game package &mdash; PyGoL v1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gui package" href="gui.html" />
+    <link rel="prev" title="cli package" href="cli.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PyGoL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pygol</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli.html">cli package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">game package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pygol.game.conway">game.conway module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pygol.game.rules">game.rules module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pygol.game">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">gui package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">utils package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PyGoL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">pygol</a> &raquo;</li>
+        
+      <li>game package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/game.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="game-package">
+<h1>game package<a class="headerlink" href="#game-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pygol.game.conway">
+<span id="game-conway-module"></span><h2>game.conway module<a class="headerlink" href="#module-pygol.game.conway" title="Permalink to this headline">¶</a></h2>
+<p>PyGoL Game of Life</p>
+<dl class="py class">
+<dt id="pygol.game.conway.Game">
+<em class="property">class </em><code class="sig-prename descclassname">pygol.game.conway.</code><code class="sig-name descname">Game</code><span class="sig-paren">(</span><em class="sig-param">width: int, height: int, seed: Optional[List[List[Any]]] = None, wrap: bool = True, rule: Union[Callable[[int, int, Iterator[Tuple[int, int, int]]], int], str] = &lt;function conways_life&gt;, alive: str = '•', dead: str = ' '</em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.game.conway.Game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix" title="pygol.utils.matrix.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">pygol.utils.matrix.Matrix</span></code></a></p>
+<p>PyGoL Game simulation class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>width, height: int</strong></dt><dd><p>Width and height of the life matrix.</p>
+</dd>
+<dt><strong>seed: `list` [`list` [`Any`]], optional</strong></dt><dd><p>Seed or base grid to start the simulation with. Must only contain <code class="docutils literal notranslate"><span class="pre">0</span></code>
+for dead cells and <code class="docutils literal notranslate"><span class="pre">1</span></code> for alive cells. When parsing an RLE file this
+seed is returned from <code class="docutils literal notranslate"><span class="pre">utils.parse_rle.parse()</span></code> as part of the user
+environment. If not specified, it defaults to a randomly filled matrix.</p>
+</dd>
+<dt><strong>wrap: bool, optional</strong></dt><dd><p>Whether to wrap the matrix around the edges. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd>
+<dt><strong>rule: `union` [`Rule Func`, str], optional</strong></dt><dd><p>Rule string or function to be used to run the simulation. Check the
+<cite>game.rules</cite> module to see available rules and rule strings. If not
+specified the rule defaults to the standard <code class="docutils literal notranslate"><span class="pre">Conway's</span> <span class="pre">Game</span> <span class="pre">of</span> <span class="pre">Life</span></code>
+rule.</p>
+</dd>
+<dt><strong>alive, dead: str, optional</strong></dt><dd><p>Strings used to represent dead and alive cells. If not specified, alive
+cells are represented using <code class="docutils literal notranslate"><span class="pre">•</span></code> and dead cells using `` <a href="#id1"><span class="problematic" id="id2">``</span></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Running from an RLE file</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pygol.utils</span> <span class="kn">import</span> <span class="n">parse_rle</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pygol.gui</span> <span class="kn">import</span> <span class="n">pygame</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conw</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="o">**</span><span class="n">parse_rle</span><span class="p">(</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">seed</span><span class="o">.</span><span class="n">rle</span><span class="p">))</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">pygame</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conw</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Running a simulation in the terminal</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conw</span> <span class="o">=</span> <span class="n">Game</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">170</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;clear&quot;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">conw</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">conw</span><span class="o">.</span><span class="n">tick</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>matrix: Matrix</strong></dt><dd><p>Current state of the life grid</p>
+</dd>
+<dt><strong>wrap: bool</strong></dt><dd><p>Whether to wrap the life grid around the edges</p>
+</dd>
+<dt><strong>rule: `callable` [[int, int, Neighbors], int]</strong></dt><dd><p>Rule to use when running the simulation</p>
+</dd>
+<dt><strong>out: `callable` [`Pipe`, None]</strong></dt><dd><p>Display function receiving a pipe end to read the current state of the
+game and display it.</p>
+</dd>
+<dt><strong>charmap: `dict` [`str`, `str`]</strong></dt><dd><p>Dict containing strings to display dead and alive cells</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_random</span></code>(self, minimum, maximum)</p></td>
+<td><p>Fill the matrix with random values.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors</span></code>(self, x, y[, wrap])</p></td>
+<td><p>Iterate through the neighboors of a point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad</span></code>(self, top, right, bottom, left, value)</p></td>
+<td><p>Pad the matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad_bottom</span></code>(self, bottom, value)</p></td>
+<td><p>Pad the bottom of the matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad_left</span></code>(self, left, value)</p></td>
+<td><p>Pad the left side of the matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad_right</span></code>(self, right, value)</p></td>
+<td><p>Pad the right side of the matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad_top</span></code>(self, top, value)</p></td>
+<td><p>Pad the top of the matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pygol.game.conway.Game.pipe" title="pygol.game.conway.Game.pipe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipe</span></code></a>(self, func)</p></td>
+<td><p>Save a display function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">resize</span></code>(self, width, height, value, center)</p></td>
+<td><p>Resize the matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pygol.game.conway.Game.run" title="pygol.game.conway.Game.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(self, times, delay)</p></td>
+<td><p>Run the life simulation and call the display function</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pygol.game.conway.Game.tick" title="pygol.game.conway.Game.tick"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tick</span></code></a>(self)</p></td>
+<td><p>Advance the simulation by one tick.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="pygol.game.conway.Game.pipe">
+<code class="sig-name descname">pipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">‘Callable[[mp.Pipe], None]’</span></em><span class="sig-paren">)</span> &#x2192; ’Game’<a class="headerlink" href="#pygol.game.conway.Game.pipe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save a display function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>func: `callable` [`Pipe`, None]</strong></dt><dd><p>Display function receiving a pipe end to read and display to current
+game state. See the <code class="docutils literal notranslate"><span class="pre">gui</span></code> module for example display functions.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self: Game</dt><dd><p>Returns the game object to allow chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The display function is spawned in a different process using the
+<code class="docutils literal notranslate"><span class="pre">multiprocess</span></code> module. It receives a pipe that it can read and write
+to. The pipe can be read using <code class="docutils literal notranslate"><span class="pre">pipe.recv()</span></code> and written to using
+<code class="docutils literal notranslate"><span class="pre">pipe.send(payload)</span></code>. The display function should only write a
+<code class="docutils literal notranslate"><span class="pre">SIGTERM</span></code> signal into the pip when it is terminated. This signals the
+simulation process that it has been terminated, presumably by the user
+(e.g. by closing a pygame window).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pygol.game.conway.Game.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">times</span><span class="p">:</span> <span class="n">‘int’</span></em>, <em class="sig-param"><span class="n">delay</span><span class="p">:</span> <span class="n">‘float’</span> <span class="o">=</span> <span class="default_value">0.1</span></em><span class="sig-paren">)</span> &#x2192; ’Game’<a class="headerlink" href="#pygol.game.conway.Game.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the life simulation and call the display function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>time: int</strong></dt><dd><p>Amount of ticks to run the simulation.</p>
+</dd>
+<dt><strong>delay: float, optional</strong></dt><dd><p>Delay between every frame of the simulation. Defaults to <code class="docutils literal notranslate"><span class="pre">0.1</span></code>
+seconds.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self: Game</dt><dd><p>Returns the game object to allow chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The run function first writes the delay into the pipe before running the
+simulation and writing the game states to the pipe. The run function
+may terminate before having completed the specified number of ticks
+if it receives a <code class="docutils literal notranslate"><span class="pre">SIGTERM</span></code> signal from the display function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pygol.game.conway.Game.tick">
+<code class="sig-name descname">tick</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span> &#x2192; ’Game’<a class="headerlink" href="#pygol.game.conway.Game.tick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Advance the simulation by one tick.</p>
+<p>Construct a new game state by applying the rule function to all cells.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>self: Game</dt><dd><p>Returns the game object to allow chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pygol.game.rules">
+<span id="game-rules-module"></span><h2>game.rules module<a class="headerlink" href="#module-pygol.game.rules" title="Permalink to this headline">¶</a></h2>
+<p>Common Game of Life Rules</p>
+<dl class="py data">
+<dt id="pygol.game.rules.RULES">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">RULES</code><em class="property"> = {'/2': &lt;function seeds&gt;, '0/2': &lt;function live_free_or_die&gt;, '012345678/3': &lt;function life_without_death&gt;, '02468/1357': &lt;function fredkin&gt;, '1234/3': &lt;function mazectric&gt;, '12345/3': &lt;function maze&gt;, '125/36': &lt;function two_by_two&gt;, '1357/1357': &lt;function replicator&gt;, '23/3': &lt;function conways_life&gt;, '23/36': &lt;function high_life&gt;, '23/37': &lt;function dry_life&gt;, '23/38': &lt;function pedestrian_life&gt;, '245/368': &lt;function move&gt;, '2x2': &lt;function two_by_two&gt;, '34678/3678': &lt;function day_and_night&gt;, 'B1357/S02468': &lt;function fredkin&gt;, 'B1357/S1357': &lt;function replicator&gt;, 'B2/S': &lt;function seeds&gt;, 'B2/S0': &lt;function live_free_or_die&gt;, 'B3/S012345678': &lt;function life_without_death&gt;, 'B3/S1234': &lt;function mazectric&gt;, 'B3/S12345': &lt;function maze&gt;, 'B3/S23': &lt;function conways_life&gt;, 'B36/S125': &lt;function two_by_two&gt;, 'B36/S23': &lt;function high_life&gt;, 'B3678/34678': &lt;function day_and_night&gt;, 'B368/S245': &lt;function move&gt;, 'B37/S23': &lt;function dry_life&gt;, 'B38/S23': &lt;function pedestrian_life&gt;, 'conway': &lt;function conways_life&gt;, 'conways life': &lt;function conways_life&gt;, 'day and night': &lt;function day_and_night&gt;, 'dry life': &lt;function dry_life&gt;, 'fredkin': &lt;function fredkin&gt;, 'high life': &lt;function high_life&gt;, 'life without death': &lt;function life_without_death&gt;, 'live free or die': &lt;function live_free_or_die&gt;, 'maze': &lt;function maze&gt;, 'mazectric': &lt;function mazectric&gt;, 'move': &lt;function move&gt;, 'pedestrian life': &lt;function pedestrian_life&gt;, 'replicator': &lt;function replicator&gt;, 'seeds': &lt;function seeds&gt;, 'two by two': &lt;function two_by_two&gt;}</em><a class="headerlink" href="#pygol.game.rules.RULES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dict collection of all rule-string aliases. Check the individual rules for
+available aliases</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.conways_life">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">conways_life</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.conways_life" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standard Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B3/S23</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">23/3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conway</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conways</span> <span class="pre">life</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Conway%27s_Game_of_Life">https://www.conwaylife.com/wiki/Conway%27s_Game_of_Life</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.day_and_night">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">day_and_night</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.day_and_night" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Day &amp; Night” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B3678/34678</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">34678/3678</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span> <span class="pre">and</span> <span class="pre">night</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:Day_%26_Night">https://www.conwaylife.com/wiki/OCA:Day_%26_Night</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.dry_life">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">dry_life</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.dry_life" title="Permalink to this definition">¶</a></dt>
+<dd><p>“DryLife” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B37/S23</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">23/37</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dry</span> <span class="pre">life</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:DryLife">https://www.conwaylife.com/wiki/OCA:DryLife</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.fredkin">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">fredkin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.fredkin" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Fredkin” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B1357/S02468</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2468/1357</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fredkin</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:Replicator#Replicator_2">https://www.conwaylife.com/wiki/OCA:Replicator#Replicator_2</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.high_life">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">high_life</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.high_life" title="Permalink to this definition">¶</a></dt>
+<dd><p>“HighLife” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B36/S23</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">23/36</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">high</span> <span class="pre">life</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:HighLife">https://www.conwaylife.com/wiki/OCA:HighLife</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.life_without_death">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">life_without_death</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.life_without_death" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Life Without Death” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B3/S012345678</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">012345678/3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">life</span> <span class="pre">without</span> <span class="pre">death</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:Life_without_death">https://www.conwaylife.com/wiki/OCA:Life_without_death</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.live_free_or_die">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">live_free_or_die</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.live_free_or_die" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Live Free or Die” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B2/S0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0/2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">live</span> <span class="pre">free</span> <span class="pre">or</span> <span class="pre">die</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:Live_Free_or_Die">https://www.conwaylife.com/wiki/OCA:Live_Free_or_Die</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.maze">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">maze</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.maze" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Maze” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B3/S12345</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">12345/3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maze</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:Maze">https://www.conwaylife.com/wiki/OCA:Maze</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.mazectric">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">mazectric</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.mazectric" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Mazectric” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B3/S1234</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1234/3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mazectric</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:Maze#Similar_rules">https://www.conwaylife.com/wiki/OCA:Maze#Similar_rules</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.move">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">move</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Move” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B368/S245</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">245/368</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">move</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:Move">https://www.conwaylife.com/wiki/OCA:Move</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.pedestrian_life">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">pedestrian_life</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.pedestrian_life" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Pedestrian Life” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B38/S23</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">23/38</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pedestrian</span> <span class="pre">life</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:Pedestrian_Life">https://www.conwaylife.com/wiki/OCA:Pedestrian_Life</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.replicator">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">replicator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.replicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Replicator” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B1357/S1357</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1357/1357</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicator</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:Replicator">https://www.conwaylife.com/wiki/OCA:Replicator</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.seeds">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">seeds</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.seeds" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Seeds” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B2/S</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seeds</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:Seeds">https://www.conwaylife.com/wiki/OCA:Seeds</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.game.rules.two_by_two">
+<code class="sig-prename descclassname">pygol.game.rules.</code><code class="sig-name descname">two_by_two</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cell</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">live_count</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">neighbors</span><span class="p">:</span> <span class="n">Iterator<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>int<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pygol.game.rules.two_by_two" title="Permalink to this definition">¶</a></dt>
+<dd><p>“2x2” Game of Life rule</p>
+<dl class="simple">
+<dt>This rule can be specified using these strings:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B36/S125</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">125/36</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">two</span> <span class="pre">by</span> <span class="pre">two</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2x2</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
+</dd>
+<dt><strong>live_count: int</strong></dt><dd><p>Count of cells alive (<code class="docutils literal notranslate"><span class="pre">1</span></code>) around the current cell.</p>
+</dd>
+<dt><strong>neighbors: Iterator[Tuple[int, int, int]], optional</strong></dt><dd><p>Iterator yielding the value, the x- and the y-coordinate of the
+individual neighbors. This parameters might only be required by very few
+rules and is present in every game rule for consistency.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">live_count</span></code> depends on the type of neighborhood you use.
+PyGoL uses the Moore neighborhood by default. See the LifeWiki for more
+information on types of neighborhood:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods">https://www.conwaylife.com/wiki/Cellular_automaton#Common_dimensions_and_neighborhoods</a></p>
+<p class="rubric">References</p>
+<p>Find this rule in the LifeWiki:
+<a class="reference external" href="https://www.conwaylife.com/wiki/OCA:2%C3%972">https://www.conwaylife.com/wiki/OCA:2%C3%972</a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pygol.game">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pygol.game" title="Permalink to this headline">¶</a></h2>
+<p>PyGoL Main Game Module</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gui.html" class="btn btn-neutral float-right" title="gui package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cli.html" class="btn btn-neutral float-left" title="cli package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Ulysse McConnell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

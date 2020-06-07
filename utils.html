@@ -1,0 +1,812 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>utils package &mdash; PyGoL v1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="gui package" href="gui.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PyGoL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pygol</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli.html">cli package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html">game package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">gui package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pygol.utils.matrix">utils.matrix module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pygol.utils.parse_rle">utils.parse_rle module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pygol.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PyGoL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">pygol</a> &raquo;</li>
+        
+      <li>utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="utils-package">
+<h1>utils package<a class="headerlink" href="#utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pygol.utils.matrix">
+<span id="utils-matrix-module"></span><h2>utils.matrix module<a class="headerlink" href="#module-pygol.utils.matrix" title="Permalink to this headline">¶</a></h2>
+<p>Matrix utility</p>
+<dl class="py class">
+<dt id="pygol.utils.matrix.Matrix">
+<em class="property">class </em><code class="sig-prename descclassname">pygol.utils.matrix.</code><code class="sig-name descname">Matrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">width</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">height</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">List<span class="p">[</span>List<span class="p">[</span>Any<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Matrix utility class.</p>
+<p>This matrix class is iterable (yielding elements from left to right, top to
+bottom) and supports prettyprinting (via the __str__ method) as well as
+square bracket access (<cite>matrix[row][col]</cite>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>width: int</strong></dt><dd><p>Width of the resulting matrix.</p>
+</dd>
+<dt><strong>height: int, optional</strong></dt><dd><p>Height of the resulting matrix. If no height is specified, <code class="docutils literal notranslate"><span class="pre">height</span></code>
+will default to <code class="docutils literal notranslate"><span class="pre">width</span></code>, resulting in a square matrix.</p>
+</dd>
+<dt><strong>content: `list` [`list` [`Any`]], optional</strong></dt><dd><p>Optional content to fill the matrix with. This content must be of the
+same dimensions as the desired matrix. If not specified, the matrix
+will be filled with <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<span class="go">1 0 0</span>
+<span class="go">0 0 0</span>
+<span class="go">0 0 0</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">fill_random</span><span class="p">())</span>
+<span class="go">0 1 1</span>
+<span class="go">0 1 1</span>
+<span class="go">1 1 0</span>
+<span class="go"># random</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="go">2 2 2 2 2</span>
+<span class="go">2 0 1 1 2</span>
+<span class="go">2 0 1 1 2</span>
+<span class="go">2 1 1 0 2</span>
+<span class="go">2 2 2 2 2</span>
+<span class="go"># random</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>width: int</strong></dt><dd><p>Width of the matrix.</p>
+</dd>
+<dt><strong>height: int</strong></dt><dd><p>Height of the matrix.</p>
+</dd>
+<dt><strong>matrix: `list` [`list` [`Any`]]</strong></dt><dd><p>Content of the matrix.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pygol.utils.matrix.Matrix.fill_random" title="pygol.utils.matrix.Matrix.fill_random"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_random</span></code></a>(self, minimum, maximum)</p></td>
+<td><p>Fill the matrix with random values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pygol.utils.matrix.Matrix.neighbors" title="pygol.utils.matrix.Matrix.neighbors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neighbors</span></code></a>(self, x, y[, wrap])</p></td>
+<td><p>Iterate through the neighboors of a point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pygol.utils.matrix.Matrix.pad" title="pygol.utils.matrix.Matrix.pad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad</span></code></a>(self, top, right, bottom, left, value)</p></td>
+<td><p>Pad the matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pygol.utils.matrix.Matrix.pad_bottom" title="pygol.utils.matrix.Matrix.pad_bottom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad_bottom</span></code></a>(self, bottom, value)</p></td>
+<td><p>Pad the bottom of the matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pygol.utils.matrix.Matrix.pad_left" title="pygol.utils.matrix.Matrix.pad_left"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad_left</span></code></a>(self, left, value)</p></td>
+<td><p>Pad the left side of the matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pygol.utils.matrix.Matrix.pad_right" title="pygol.utils.matrix.Matrix.pad_right"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad_right</span></code></a>(self, right, value)</p></td>
+<td><p>Pad the right side of the matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pygol.utils.matrix.Matrix.pad_top" title="pygol.utils.matrix.Matrix.pad_top"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad_top</span></code></a>(self, top, value)</p></td>
+<td><p>Pad the top of the matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pygol.utils.matrix.Matrix.resize" title="pygol.utils.matrix.Matrix.resize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resize</span></code></a>(self, width, height, value, center)</p></td>
+<td><p>Resize the matrix.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="pygol.utils.matrix.Matrix.fill_random">
+<code class="sig-name descname">fill_random</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">minimum</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">maximum</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.fill_random" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill the matrix with random values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>minimum: int, optional</strong></dt><dd><p>Minimum (inclusive) bound for random value.</p>
+</dd>
+<dt><strong>maximum: int, optional</strong></dt><dd><p>Maximum (inclusive) bound for random value.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">fill_random</span><span class="p">())</span>
+<span class="go">1 0</span>
+<span class="go">0 1</span>
+<span class="go"># random</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pygol.utils.matrix.Matrix.neighbors">
+<code class="sig-name descname">neighbors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">wrap</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate through the neighboors of a point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x: int</strong></dt><dd><p>x-coordinate of the point in the matrix.</p>
+</dd>
+<dt><strong>y: int</strong></dt><dd><p>y-coordinate of the point in the matrix.</p>
+</dd>
+<dt><strong>wrap: bool, optional</strong></dt><dd><p>Whether to wrap around the edge of the matrix when checking
+neighborhood. If wrap is <code class="docutils literal notranslate"><span class="pre">False</span></code> this method yields <code class="docutils literal notranslate"><span class="pre">0</span></code> instead
+of wrapping around the edge; defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><dl class="simple">
+<dt><cite>tuple</cite> [<cite>Any</cite>, int, int]</dt><dd><p>Tuple of the value, the x- and the y-coordinate of a neighbor.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This method uses the Moore neighborhood to determine neighboring points.
+See Wikipedia for more information:
+<a class="reference external" href="https://en.wikipedia.org/wiki/Moore_neighborhood">https://en.wikipedia.org/wiki/Moore_neighborhood</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pygol.utils.matrix.Matrix.pad">
+<code class="sig-name descname">pad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">top</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">right</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bottom</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">left</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.pad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pad the matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>top: int</strong></dt><dd><p>Amount of rows to add to the top of the matrix.</p>
+</dd>
+<dt><strong>right: int, optional</strong></dt><dd><p>Amount of columns to add to the right side of the matrix. If this
+is <code class="docutils literal notranslate"><span class="pre">None</span></code> then <cite>right</cite> will default to <code class="docutils literal notranslate"><span class="pre">top</span></code></p>
+</dd>
+<dt><strong>bottom: int, optional</strong></dt><dd><p>Amount of rows to add to the bottom of the matrix. If this is
+<code class="docutils literal notranslate"><span class="pre">None</span></code> then <cite>bottom</cite> will default to <code class="docutils literal notranslate"><span class="pre">top</span></code></p>
+</dd>
+<dt><strong>left: int, optional</strong></dt><dd><p>Amount of columns to add to the left side of the matrix. If this is
+<code class="docutils literal notranslate"><span class="pre">None</span></code> then <cite>left</cite> will default to right.</p>
+</dd>
+<dt><strong>value: `Any`, optional</strong></dt><dd><p>Value to pad the matrix with.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="go">2 2 2 2</span>
+<span class="go">2 0 0 2</span>
+<span class="go">2 0 0 2</span>
+<span class="go">2 2 2 2</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="go">2 2 2 2 2 2</span>
+<span class="go">2 2 0 0 2 2</span>
+<span class="go">2 2 0 0 2 2</span>
+<span class="go">2 2 2 2 2 2</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pygol.utils.matrix.Matrix.pad_bottom">
+<code class="sig-name descname">pad_bottom</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">bottom</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.pad_bottom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pad the bottom of the matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>top: int</strong></dt><dd><p>Amount of rows to add to the bottom of the matrix.</p>
+</dd>
+<dt><strong>value: `Any`, optional</strong></dt><dd><p>Value to pad the matrix with.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<span class="go">0 0</span>
+<span class="go">0 0</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">pad_bottom</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="go">0 0</span>
+<span class="go">0 0</span>
+<span class="go">2 2</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pygol.utils.matrix.Matrix.pad_left">
+<code class="sig-name descname">pad_left</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">left</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.pad_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pad the left side of the matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>left: int</strong></dt><dd><p>Amount of columns to add on the left side of the matrix.</p>
+</dd>
+<dt><strong>value: `Any`, optional</strong></dt><dd><p>Value to pad the matrix with.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<span class="go">0 0</span>
+<span class="go">0 0</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">pad_left</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="go">2 0 0</span>
+<span class="go">2 0 0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pygol.utils.matrix.Matrix.pad_right">
+<code class="sig-name descname">pad_right</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">right</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.pad_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pad the right side of the matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>right: int</strong></dt><dd><p>Amount of columns to add on the right side of the matrix.</p>
+</dd>
+<dt><strong>value: `Any`, optional</strong></dt><dd><p>Value to pad the matrix with.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<span class="go">0 0</span>
+<span class="go">0 0</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">pad_right</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="go">0 0 2</span>
+<span class="go">0 0 2</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pygol.utils.matrix.Matrix.pad_top">
+<code class="sig-name descname">pad_top</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">top</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.pad_top" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pad the top of the matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>top: int</strong></dt><dd><p>Amount of rows to add to the top of the matrix.</p>
+</dd>
+<dt><strong>value: `Any`, optional</strong></dt><dd><p>Value to pad the matrix with.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+<span class="go">0 0</span>
+<span class="go">0 0</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">pad_top</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="go">2 2</span>
+<span class="go">0 0</span>
+<span class="go">0 0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pygol.utils.matrix.Matrix.resize">
+<code class="sig-name descname">resize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">width</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">height</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">center</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.resize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resize the matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>width: int</strong></dt><dd><p>Desired matrix width.</p>
+</dd>
+<dt><strong>height: int, optional</strong></dt><dd><p>Desired matrix height. Defaults to <code class="docutils literal notranslate"><span class="pre">width</span></code> if not specified.</p>
+</dd>
+<dt><strong>value: `Any`, optional</strong></dt><dd><p>Value to pad the matrix with if desired dimensions are greater than
+the current matrix.</p>
+</dd>
+<dt><strong>center: bool, optional</strong></dt><dd><p>Whether to resize relative to the center of the matrix. Default is
+<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="go">1 1 1 1</span>
+<span class="go">1 0 0 1</span>
+<span class="go">1 0 0 1</span>
+<span class="go">1 1 1 1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="go">1 1</span>
+<span class="go">1 0</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matrix</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="go">1 1 1 1</span>
+<span class="go">1 0 0 1</span>
+<span class="go">1 0 0 1</span>
+<span class="go">1 1 1 1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="go">0 0</span>
+<span class="go">0 0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pygol.utils.parse_rle">
+<span id="utils-parse-rle-module"></span><h2>utils.parse_rle module<a class="headerlink" href="#module-pygol.utils.parse_rle" title="Permalink to this headline">¶</a></h2>
+<p>Parse Run Length Encoded files</p>
+<dl class="py data">
+<dt id="pygol.utils.parse_rle.DIGIT_REG">
+<code class="sig-prename descclassname">pygol.utils.parse_rle.</code><code class="sig-name descname">DIGIT_REG</code><em class="property"> = re.compile('(-?\\d+)')</em><a class="headerlink" href="#pygol.utils.parse_rle.DIGIT_REG" title="Permalink to this definition">¶</a></dt>
+<dd><p>RegEx matching digits</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="pygol.utils.parse_rle.FIRSTLINE_REG">
+<code class="sig-prename descclassname">pygol.utils.parse_rle.</code><code class="sig-name descname">FIRSTLINE_REG</code><em class="property"> = re.compile('(x|y|rule)\\s?=\\s?(\\w+\\/?\\w*)')</em><a class="headerlink" href="#pygol.utils.parse_rle.FIRSTLINE_REG" title="Permalink to this definition">¶</a></dt>
+<dd><p>RegEx matching RLE first line</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="pygol.utils.parse_rle.RLE_REG">
+<code class="sig-prename descclassname">pygol.utils.parse_rle.</code><code class="sig-name descname">RLE_REG</code><em class="property"> = re.compile('(\\d+)?([bo])')</em><a class="headerlink" href="#pygol.utils.parse_rle.RLE_REG" title="Permalink to this definition">¶</a></dt>
+<dd><p>RegEx matching RLE directives</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.utils.parse_rle.parse">
+<code class="sig-prename descclassname">pygol.utils.parse_rle.</code><code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#pygol.utils.parse_rle.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse an RLE file and create a user environment</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>file: str</strong></dt><dd><p>Path to the RLE file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt>user_env: <cite>dict</cite> [str, <cite>Any</cite>]</dt><dd><p>User environment returned from <code class="docutils literal notranslate"><span class="pre">user_env()</span></code>. It has these attributes:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">width</span></code></dt><dd><p>Width of the Game of Life matrix.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">height</span></code></dt><dd><p>Height of the Game of Life matrix.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rule</span></code></dt><dd><p>Rule used to run the simulation.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">seed</span></code></dt><dd><p>Seed to base simulation on.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.utils.parse_rle.parse_comment">
+<code class="sig-prename descclassname">pygol.utils.parse_rle.</code><code class="sig-name descname">parse_comment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">comment</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pygol.utils.parse_rle.parse_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse RLE comments and update user environment accordingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>comment: str</strong></dt><dd><p>RLE comment to parse.</p>
+</dd>
+<dt><strong>env: `dict` [str, `Any`]</strong></dt><dd><p>Environment dictionary generated by <code class="docutils literal notranslate"><span class="pre">parse_file</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function parses comments according to information on LifeWiki. Check
+the LifeWiki page on the RLE file-format for more information:
+<a class="reference external" href="https://www.conwaylife.com/wiki">https://www.conwaylife.com/wiki</a>/Run_Length_Encoded##_lines</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.utils.parse_rle.parse_file">
+<code class="sig-prename descclassname">pygol.utils.parse_rle.</code><code class="sig-name descname">parse_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#pygol.utils.parse_rle.parse_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse RLE files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>path: str</strong></dt><dd><p>File path to RLE file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>env: <cite>dict</cite> [str, <cite>Any</cite>]</dt><dd><p>Environment dict containing parsed RLE information.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.utils.parse_rle.parse_header">
+<code class="sig-prename descclassname">pygol.utils.parse_rle.</code><code class="sig-name descname">parse_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">header</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pygol.utils.parse_rle.parse_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse RLE header lines and update user environment accordingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>header: str</strong></dt><dd><p>RLE header to parse.</p>
+</dd>
+<dt><strong>env: `dict` [str, `Any`]</strong></dt><dd><p>Environment dictionary generated by <code class="docutils literal notranslate"><span class="pre">parse_file</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function parses RLE headers according to information on LifeWiki. Check
+the LifeWiki page on the RLE file-format for more information:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Run_Length_Encoded#Description_of_format">https://www.conwaylife.com/wiki/Run_Length_Encoded#Description_of_format</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.utils.parse_rle.parse_rle">
+<code class="sig-prename descclassname">pygol.utils.parse_rle.</code><code class="sig-name descname">parse_rle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rle</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span>Tuple<span class="p">[</span>int<span class="p">, </span>str<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#pygol.utils.parse_rle.parse_rle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse RLE instructions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>rle: str</strong></dt><dd><p>RLE instruction to parse.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><cite>list</cite> [<cite>tuple</cite> [int, str]]</dt><dd><p>Parsed/unwrapped RLE instruction.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function parses RLE headers according to information on LifeWiki. Check
+the LifeWiki page on the RLE file-format for more information:
+<a class="reference external" href="https://www.conwaylife.com/wiki/Run_Length_Encoded#Description_of_format">https://www.conwaylife.com/wiki/Run_Length_Encoded#Description_of_format</a></p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">parse_rle</span><span class="p">(</span><span class="s2">&quot;bo$2bo$3o!&quot;</span><span class="p">)</span>
+<span class="go">[(1, &#39;b&#39;), (1, &#39;o&#39;), (2, &#39;b&#39;), (1, &#39;o&#39;), (3, &#39;o&#39;)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.utils.parse_rle.seed_from_rle">
+<code class="sig-prename descclassname">pygol.utils.parse_rle.</code><code class="sig-name descname">seed_from_rle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#pygol.utils.matrix.Matrix" title="pygol.utils.matrix.Matrix">pygol.utils.matrix.Matrix</a><a class="headerlink" href="#pygol.utils.parse_rle.seed_from_rle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a Game of Life seed from an environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>env: `dict` [str, `Any`]</strong></dt><dd><p>Environment dictionary generated by <code class="docutils literal notranslate"><span class="pre">parse_file</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><cite>list</cite> [<cite>list</cite> [int]]</dt><dd><p>Game of Life grid with <code class="docutils literal notranslate"><span class="pre">0</span></code> representing a dead cell and <code class="docutils literal notranslate"><span class="pre">1</span></code>
+representing a living cell.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pygol.utils.parse_rle.user_env">
+<code class="sig-prename descclassname">pygol.utils.parse_rle.</code><code class="sig-name descname">user_env</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">env</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#pygol.utils.parse_rle.user_env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a user environment from an environment dict.</p>
+<p>Generate a Game of Life seed or base matrix. Embeds this seed in a user
+environment containing the needed information to run a Game of Life
+simulation.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>env: `dict` [str, `Any`]</strong></dt><dd><p>Environment dictionary generated by <code class="docutils literal notranslate"><span class="pre">parse_file</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt>user_env: <cite>dict</cite> [str, <cite>Any</cite>]</dt><dd><p>User environment with these attributes:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">width</span></code></dt><dd><p>Width of the Game of Life matrix.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">height</span></code></dt><dd><p>Height of the Game of Life matrix.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">rule</span></code></dt><dd><p>Rule used to run the simulation.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">seed</span></code></dt><dd><p>Seed to base simulation on.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pygol.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pygol.utils" title="Permalink to this headline">¶</a></h2>
+<p>PyGoL utilities</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="gui.html" class="btn btn-neutral float-left" title="gui package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Ulysse McConnell
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
