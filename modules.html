@@ -14,7 +14,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -61,8 +63,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>pygol</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">pygol</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -73,19 +75,47 @@
            <div itemprop="articleBody">
              
   <section id="pygol">
-<h1>pygol<a class="headerlink" href="#pygol" title="Permalink to this headline"></a></h1>
+<h1>pygol<a class="headerlink" href="#pygol" title="Permalink to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">cli package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="cli.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cli.html#module-pygol.cli.cli">cli.cli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html#module-pygol.cli.cli">cli.cli module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cli.html#pygol.cli.cli.PARSER"><code class="docutils literal notranslate"><span class="pre">PARSER</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="game.html">game package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="game.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="game.html#module-pygol.game.conway">game.conway module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="game.html#module-pygol.game.rules">game.rules module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#module-pygol.game.conway">game.conway module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.conway.Game"><code class="docutils literal notranslate"><span class="pre">Game</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="game.html#pygol.game.conway.Game.pipe"><code class="docutils literal notranslate"><span class="pre">Game.pipe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#pygol.game.conway.Game.run"><code class="docutils literal notranslate"><span class="pre">Game.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="game.html#pygol.game.conway.Game.tick"><code class="docutils literal notranslate"><span class="pre">Game.tick()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="game.html#module-pygol.game.rules">game.rules module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.RULES"><code class="docutils literal notranslate"><span class="pre">RULES</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.conways_life"><code class="docutils literal notranslate"><span class="pre">conways_life()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.day_and_night"><code class="docutils literal notranslate"><span class="pre">day_and_night()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.dry_life"><code class="docutils literal notranslate"><span class="pre">dry_life()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.fredkin"><code class="docutils literal notranslate"><span class="pre">fredkin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.high_life"><code class="docutils literal notranslate"><span class="pre">high_life()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.life_without_death"><code class="docutils literal notranslate"><span class="pre">life_without_death()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.live_free_or_die"><code class="docutils literal notranslate"><span class="pre">live_free_or_die()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.maze"><code class="docutils literal notranslate"><span class="pre">maze()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.mazectric"><code class="docutils literal notranslate"><span class="pre">mazectric()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.move"><code class="docutils literal notranslate"><span class="pre">move()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.pedestrian_life"><code class="docutils literal notranslate"><span class="pre">pedestrian_life()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.replicator"><code class="docutils literal notranslate"><span class="pre">replicator()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.seeds"><code class="docutils literal notranslate"><span class="pre">seeds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html#pygol.game.rules.two_by_two"><code class="docutils literal notranslate"><span class="pre">two_by_two()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="game.html#module-pygol.game">Module contents</a></li>
 </ul>
 </li>
@@ -98,8 +128,33 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">utils package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="utils.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#module-pygol.utils.matrix">utils.matrix module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#module-pygol.utils.parse_rle">utils.parse_rle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html#module-pygol.utils.matrix">utils.matrix module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix"><code class="docutils literal notranslate"><span class="pre">Matrix</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix.fill_random"><code class="docutils literal notranslate"><span class="pre">Matrix.fill_random()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix.neighbors"><code class="docutils literal notranslate"><span class="pre">Matrix.neighbors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix.pad"><code class="docutils literal notranslate"><span class="pre">Matrix.pad()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix.pad_bottom"><code class="docutils literal notranslate"><span class="pre">Matrix.pad_bottom()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix.pad_left"><code class="docutils literal notranslate"><span class="pre">Matrix.pad_left()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix.pad_right"><code class="docutils literal notranslate"><span class="pre">Matrix.pad_right()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix.pad_top"><code class="docutils literal notranslate"><span class="pre">Matrix.pad_top()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix.resize"><code class="docutils literal notranslate"><span class="pre">Matrix.resize()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html#module-pygol.utils.parse_rle">utils.parse_rle module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.parse_rle.DIGIT_REG"><code class="docutils literal notranslate"><span class="pre">DIGIT_REG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.parse_rle.FIRSTLINE_REG"><code class="docutils literal notranslate"><span class="pre">FIRSTLINE_REG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.parse_rle.RLE_REG"><code class="docutils literal notranslate"><span class="pre">RLE_REG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.parse_rle.parse"><code class="docutils literal notranslate"><span class="pre">parse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.parse_rle.parse_comment"><code class="docutils literal notranslate"><span class="pre">parse_comment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.parse_rle.parse_file"><code class="docutils literal notranslate"><span class="pre">parse_file()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.parse_rle.parse_header"><code class="docutils literal notranslate"><span class="pre">parse_header()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.parse_rle.parse_rle"><code class="docutils literal notranslate"><span class="pre">parse_rle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.parse_rle.seed_from_rle"><code class="docutils literal notranslate"><span class="pre">seed_from_rle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#pygol.utils.parse_rle.user_env"><code class="docutils literal notranslate"><span class="pre">user_env()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="utils.html#module-pygol.utils">Module contents</a></li>
 </ul>
 </li>
