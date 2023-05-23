@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>utils package &mdash; PyGoL v1.0.0 documentation</title>
@@ -11,10 +11,9 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -28,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> PyGoL
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PyGoL
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -83,7 +86,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="modules.html">pygol</a></li>
       <li class="breadcrumb-item active">utils package</li>
       <li class="wy-breadcrumbs-aside">
@@ -112,7 +115,7 @@
 bottom) and supports prettyprinting (via the __str__ method) as well as
 square bracket access (<cite>matrix[row][col]</cite>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>width: int</strong></dt><dd><p>Width of the resulting matrix.</p>
 </dd>
@@ -152,7 +155,7 @@ will be filled with <code class="docutils literal notranslate"><span class="pre"
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>width: int</strong></dt><dd><p>Width of the matrix.</p>
 </dd>
@@ -165,10 +168,6 @@ will be filled with <code class="docutils literal notranslate"><span class="pre"
 </dl>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pygol.utils.matrix.Matrix.fill_random" title="pygol.utils.matrix.Matrix.fill_random"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_random</span></code></a>([minimum, maximum])</p></td>
 <td><p>Fill the matrix with random values.</p></td>
@@ -201,7 +200,7 @@ will be filled with <code class="docutils literal notranslate"><span class="pre"
 <span class="sig-name descname"><span class="pre">fill_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.fill_random" title="Permalink to this definition"></a></dt>
 <dd><p>Fill the matrix with random values.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>minimum: int, optional</strong></dt><dd><p>Minimum (inclusive) bound for random value.</p>
 </dd>
@@ -209,7 +208,7 @@ will be filled with <code class="docutils literal notranslate"><span class="pre"
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
 </dd>
@@ -231,7 +230,7 @@ will be filled with <code class="docutils literal notranslate"><span class="pre"
 <span class="sig-name descname"><span class="pre">neighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.neighbors" title="Permalink to this definition"></a></dt>
 <dd><p>Iterate through the neighboors of a point.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>x: int</strong></dt><dd><p>x-coordinate of the point in the matrix.</p>
 </dd>
@@ -243,7 +242,7 @@ of wrapping around the edge; defaults to <code class="docutils literal notransla
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Yields</dt>
+<dt class="field-even">Yields<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><cite>tuple</cite> [<cite>Any</cite>, int, int]</dt><dd><p>Tuple of the value, the x- and the y-coordinate of a neighbor.</p>
 </dd>
@@ -261,7 +260,7 @@ See Wikipedia for more information:
 <span class="sig-name descname"><span class="pre">pad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bottom</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.pad" title="Permalink to this definition"></a></dt>
 <dd><p>Pad the matrix.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>top: int</strong></dt><dd><p>Amount of rows to add to the top of the matrix.</p>
 </dd>
@@ -278,7 +277,7 @@ is <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
 </dd>
@@ -309,7 +308,7 @@ is <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <span class="sig-name descname"><span class="pre">pad_bottom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bottom</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.pad_bottom" title="Permalink to this definition"></a></dt>
 <dd><p>Pad the bottom of the matrix.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>top: int</strong></dt><dd><p>Amount of rows to add to the bottom of the matrix.</p>
 </dd>
@@ -317,7 +316,7 @@ is <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
 </dd>
@@ -344,7 +343,7 @@ is <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <span class="sig-name descname"><span class="pre">pad_left</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.pad_left" title="Permalink to this definition"></a></dt>
 <dd><p>Pad the left side of the matrix.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>left: int</strong></dt><dd><p>Amount of columns to add on the left side of the matrix.</p>
 </dd>
@@ -352,7 +351,7 @@ is <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
 </dd>
@@ -378,7 +377,7 @@ is <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <span class="sig-name descname"><span class="pre">pad_right</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.pad_right" title="Permalink to this definition"></a></dt>
 <dd><p>Pad the right side of the matrix.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>right: int</strong></dt><dd><p>Amount of columns to add on the right side of the matrix.</p>
 </dd>
@@ -386,7 +385,7 @@ is <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
 </dd>
@@ -412,7 +411,7 @@ is <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <span class="sig-name descname"><span class="pre">pad_top</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.pad_top" title="Permalink to this definition"></a></dt>
 <dd><p>Pad the top of the matrix.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>top: int</strong></dt><dd><p>Amount of rows to add to the top of the matrix.</p>
 </dd>
@@ -420,7 +419,7 @@ is <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
 </dd>
@@ -447,7 +446,7 @@ is <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.utils.matrix.Matrix.resize" title="Permalink to this definition"></a></dt>
 <dd><p>Resize the matrix.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>width: int</strong></dt><dd><p>Desired matrix width.</p>
 </dd>
@@ -461,7 +460,7 @@ the current matrix.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>self</dt><dd><p>Returns the matrix object to allow chaining.</p>
 </dd>
@@ -522,13 +521,13 @@ the current matrix.</p>
 <span class="sig-prename descclassname"><span class="pre">pygol.utils.parse_rle.</span></span><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pygol.utils.parse_rle.parse" title="Permalink to this definition"></a></dt>
 <dd><p>Parse an RLE file and create a user environment</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>file: str</strong></dt><dd><p>Path to the RLE file.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
 <dt>user_env: <cite>dict</cite> [str, <cite>Any</cite>]</dt><dd><p>User environment returned from <code class="docutils literal notranslate"><span class="pre">user_env()</span></code>. It has these attributes:</p>
 <dl class="simple">
@@ -552,7 +551,7 @@ the current matrix.</p>
 <span class="sig-prename descclassname"><span class="pre">pygol.utils.parse_rle.</span></span><span class="sig-name descname"><span class="pre">parse_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pygol.utils.parse_rle.parse_comment" title="Permalink to this definition"></a></dt>
 <dd><p>Parse RLE comments and update user environment accordingly.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>comment: str</strong></dt><dd><p>RLE comment to parse.</p>
 </dd>
@@ -572,13 +571,13 @@ the LifeWiki page on the RLE file-format for more information:
 <span class="sig-prename descclassname"><span class="pre">pygol.utils.parse_rle.</span></span><span class="sig-name descname"><span class="pre">parse_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pygol.utils.parse_rle.parse_file" title="Permalink to this definition"></a></dt>
 <dd><p>Parse RLE files.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>path: str</strong></dt><dd><p>File path to RLE file.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>env: <cite>dict</cite> [str, <cite>Any</cite>]</dt><dd><p>Environment dict containing parsed RLE information.</p>
 </dd>
@@ -592,7 +591,7 @@ the LifeWiki page on the RLE file-format for more information:
 <span class="sig-prename descclassname"><span class="pre">pygol.utils.parse_rle.</span></span><span class="sig-name descname"><span class="pre">parse_header</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pygol.utils.parse_rle.parse_header" title="Permalink to this definition"></a></dt>
 <dd><p>Parse RLE header lines and update user environment accordingly.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>header: str</strong></dt><dd><p>RLE header to parse.</p>
 </dd>
@@ -612,13 +611,13 @@ the LifeWiki page on the RLE file-format for more information:
 <span class="sig-prename descclassname"><span class="pre">pygol.utils.parse_rle.</span></span><span class="sig-name descname"><span class="pre">parse_rle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pygol.utils.parse_rle.parse_rle" title="Permalink to this definition"></a></dt>
 <dd><p>Parse RLE instructions.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>rle: str</strong></dt><dd><p>RLE instruction to parse.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><cite>list</cite> [<cite>tuple</cite> [int, str]]</dt><dd><p>Parsed/unwrapped RLE instruction.</p>
 </dd>
@@ -641,13 +640,13 @@ the LifeWiki page on the RLE file-format for more information:
 <span class="sig-prename descclassname"><span class="pre">pygol.utils.parse_rle.</span></span><span class="sig-name descname"><span class="pre">seed_from_rle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pygol.utils.matrix.Matrix" title="pygol.utils.matrix.Matrix"><span class="pre">Matrix</span></a></span></span><a class="headerlink" href="#pygol.utils.parse_rle.seed_from_rle" title="Permalink to this definition"></a></dt>
 <dd><p>Generate a Game of Life seed from an environment.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>env: `dict` [str, `Any`]</strong></dt><dd><p>Environment dictionary generated by <code class="docutils literal notranslate"><span class="pre">parse_file</span></code>.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><cite>list</cite> [<cite>list</cite> [int]]</dt><dd><p>Game of Life grid with <code class="docutils literal notranslate"><span class="pre">0</span></code> representing a dead cell and <code class="docutils literal notranslate"><span class="pre">1</span></code>
 representing a living cell.</p>
@@ -665,13 +664,13 @@ representing a living cell.</p>
 environment containing the needed information to run a Game of Life
 simulation.</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>env: `dict` [str, `Any`]</strong></dt><dd><p>Environment dictionary generated by <code class="docutils literal notranslate"><span class="pre">parse_file</span></code>.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
 <dt>user_env: <cite>dict</cite> [str, <cite>Any</cite>]</dt><dd><p>User environment with these attributes:</p>
 <dl class="simple">

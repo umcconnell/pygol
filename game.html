@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>game package &mdash; PyGoL v1.0.0 documentation</title>
@@ -11,10 +11,9 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> PyGoL
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PyGoL
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -89,7 +92,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="modules.html">pygol</a></li>
       <li class="breadcrumb-item active">game package</li>
       <li class="wy-breadcrumbs-aside">
@@ -111,11 +114,11 @@
 <p>PyGoL Game of Life</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pygol.game.conway.Game">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygol.game.conway.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">width:</span> <span class="pre">int,</span> <span class="pre">height:</span> <span class="pre">int,</span> <span class="pre">seed:</span> <span class="pre">~typing.List[~typing.List[~typing.Any]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">wrap:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True,</span> <span class="pre">rule:</span> <span class="pre">~typing.Union[~typing.Callable[[int,</span> <span class="pre">int,</span> <span class="pre">~typing.Iterator[~typing.Tuple[int,</span> <span class="pre">int,</span> <span class="pre">int]]],</span> <span class="pre">int],</span> <span class="pre">str]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">conways_life&gt;,</span> <span class="pre">alive:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'•',</span> <span class="pre">dead:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'</span> <span class="pre">'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.game.conway.Game" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pygol.game.conway.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">width:</span> <span class="pre">int,</span> <span class="pre">height:</span> <span class="pre">int,</span> <span class="pre">seed:</span> <span class="pre">~typing.List[~typing.List[~typing.Any]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">wrap:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True,</span> <span class="pre">rule:</span> <span class="pre">~typing.Callable[[int,</span> <span class="pre">int,</span> <span class="pre">~typing.Iterator[~typing.Tuple[int,</span> <span class="pre">int,</span> <span class="pre">int]]],</span> <span class="pre">int]</span> <span class="pre">|</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">conways_life&gt;,</span> <span class="pre">alive:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'•',</span> <span class="pre">dead:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'</span> <span class="pre">'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pygol.game.conway.Game" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="utils.html#pygol.utils.matrix.Matrix" title="pygol.utils.matrix.Matrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">Matrix</span></code></a></p>
 <p>PyGoL Game simulation class</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>width, height: int</strong></dt><dd><p>Width and height of the life matrix.</p>
 </dd>
@@ -157,7 +160,7 @@ cells are represented using <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>matrix: Matrix</strong></dt><dd><p>Current state of the life grid</p>
 </dd>
@@ -175,10 +178,6 @@ game and display it.</p>
 </dl>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_random</span></code>([minimum, maximum])</p></td>
 <td><p>Fill the matrix with random values.</p></td>
@@ -220,14 +219,14 @@ game and display it.</p>
 <span class="sig-name descname"><span class="pre">pipe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Pipe</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pygol.game.conway.Game" title="pygol.game.conway.Game"><span class="pre">Game</span></a></span></span><a class="headerlink" href="#pygol.game.conway.Game.pipe" title="Permalink to this definition"></a></dt>
 <dd><p>Save a display function.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>func: `callable` [`Pipe`, None]</strong></dt><dd><p>Display function receiving a pipe end to read and display to current
 game state. See the <code class="docutils literal notranslate"><span class="pre">gui</span></code> module for example display functions.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>self: Game</dt><dd><p>Returns the game object to allow chaining.</p>
 </dd>
@@ -249,7 +248,7 @@ simulation process that it has been terminated, presumably by the user
 <span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pygol.game.conway.Game" title="pygol.game.conway.Game"><span class="pre">Game</span></a></span></span><a class="headerlink" href="#pygol.game.conway.Game.run" title="Permalink to this definition"></a></dt>
 <dd><p>Run the life simulation and call the display function</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>time: int</strong></dt><dd><p>Amount of ticks to run the simulation.</p>
 </dd>
@@ -258,7 +257,7 @@ seconds.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>self: Game</dt><dd><p>Returns the game object to allow chaining.</p>
 </dd>
@@ -278,7 +277,7 @@ if it receives a <code class="docutils literal notranslate"><span class="pre">SI
 <dd><p>Advance the simulation by one tick.</p>
 <p>Construct a new game state by applying the rule function to all cells.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>self: Game</dt><dd><p>Returns the game object to allow chaining.</p>
 </dd>
@@ -314,7 +313,7 @@ available aliases</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -326,7 +325,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -356,7 +355,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -368,7 +367,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -398,7 +397,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -410,7 +409,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -440,7 +439,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -452,7 +451,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -482,7 +481,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -494,7 +493,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -524,7 +523,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -536,7 +535,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -566,7 +565,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -578,7 +577,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -608,7 +607,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -620,7 +619,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -650,7 +649,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -662,7 +661,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -692,7 +691,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -704,7 +703,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -734,7 +733,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -746,7 +745,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -776,7 +775,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -788,7 +787,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -818,7 +817,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -830,7 +829,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
@@ -861,7 +860,7 @@ information on types of neighborhood:
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>cell: int</strong></dt><dd><p>Value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead)</p>
 </dd>
@@ -873,7 +872,7 @@ rules and is present in every game rule for consistency.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Computed value of the current cell. Can be <code class="docutils literal notranslate"><span class="pre">1</span></code> (alive) or <code class="docutils literal notranslate"><span class="pre">0</span></code> (dead).</p>
 </dd>
