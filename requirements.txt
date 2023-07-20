@@ -16,7 +16,7 @@ numpydoc==1.0.0
 packaging==20.4
 pycodestyle==2.5.0
 pygame==1.9.6
-Pygments==2.7.4
+Pygments==2.15.0
 pylint==2.4.4
 pyparsing==2.4.7
 pytz==2020.1
